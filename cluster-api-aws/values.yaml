@@ -69,15 +69,17 @@ machinePool: []
 #   subnets: []
 #   labels: []
 
+#machineDeployment: []
+# One MachineDeployment is created for each AZ
 machineDeployment:
-  enabled: false
-  replicas: 3
-  selector:
-    matchLabels: null
-  machineType: t3.large
-  rootVolume:
-    size: 8
-    type: gp2
+  - name: normal
+    replicasPerAZ: 1
+    selector:
+      matchLabels: null
+    machineType: t3.large
+    rootVolume:
+      size: 8
+      type: gp2
 
 job:
   image:
