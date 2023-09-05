@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push Helm Chart to ChartMuseum
-        uses: bsord/helm-push@v2.14.3-0.7.1
+        uses: bsord/helm-push@v4.2.0
         with:
           username: ${{ secrets.HARBOR_USER }}
           password: ${{ secrets.HARBOR_USER_SECRET }}
