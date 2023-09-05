@@ -16,10 +16,10 @@ jobs:
   # This workflow contains a single job called "build"
   release-chart:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest@v2.14.3-0.7.1
+    runs-on: ubuntu-latest
     steps:
       - name: Push Helm Chart to ChartMuseum
-        uses: bsord/helm-push@latest
+        uses: bsord/helm-push@v2.14.3-0.7.1
         with:
           username: ${{ secrets.HARBOR_USER }}
           password: ${{ secrets.HARBOR_USER_SECRET }}
